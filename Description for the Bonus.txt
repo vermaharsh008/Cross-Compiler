@@ -1,0 +1,8 @@
+This files contains the bonus 1 and 2.
+Bonus 1 - Changes have been made to the accepting function for AVID and SVID to set the default value and the flags 	  accordingly (0 - Integer, 1 - Float, 2 - String)
+Bonus 2 - A new function has been added to scanner.c, this function adds the VIDs to the symbol table if they don't exist 	  	  already. The symbol table is a dynamic array of a struct(Declared in token.h). The struct contains the name and flag           for each VID. Rest of the implementation is present in parser.Method gen_incode() is used to print to a temporary 	  	  text file. After all the code is printed, the temporary file is read again to copy all the code to the actual file. 	  But before the code is copied, all the variables that are present in the symbol table declared at the top. All the 	  dynamic memory is cleared in the method program.
+
+Please note that the implementation for string concatenation of a variable has not been implemented.
+test$ = a$ # b$;
+test$ = a$ # "abc"
+Correct C code is not generated for them. However string literal concatenation with string literal works.
